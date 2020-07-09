@@ -1,5 +1,7 @@
 package edu.pdx.cs410J.JavaKataTeamOne;
 
+import java.util.Hashtable;
+
 /**
  * A class for getting started with a code kata
  *
@@ -7,7 +9,20 @@ package edu.pdx.cs410J.JavaKataTeamOne;
  * class (and its tests).
  */
 public class Kata {
-                                                                                    
+
+  Hashtable<Integer, String> h;
+
+  public Kata() {
+    h = new Hashtable<Integer, String>();
+    h.put(1,"I");
+    h.put(5,"V");
+    h.put(10,"X");
+    h.put(50,"L");
+    h.put(100,"C");
+    h.put(500,"D");
+    h.put(1000,"M"); 
+  }
+
 
   public static void main(String[] args) {
 
@@ -16,7 +31,11 @@ public class Kata {
     System.exit(1);
   }
 
+
   public static String romanNumeralFor(int number) {
-    return ("I");
+    if (number == 1) { return ("I"); }
+    if (number == 4) { return ("IV"); }
+    if (number == 5) { return ("V"); }
+    return "none";
   }
 }
