@@ -27,34 +27,29 @@ public class Kata {
     h.put(100,"C");
     h.put(500,"D");
     h.put(1000,"M");
-
-//    for (int n : h.keySet()) {
-//      System.out.println(n);
-//    }
   }
 
 
   public static void main(String[] args) {
     Kata kata = new Kata();
-    System.err.println("Missing command line arguments");
+    if (args.length == 0) {
+      System.err.println("Missing command line arguments");
+    }
+    for (String number : args) {
+      System.out.println(kata.romanNumeralFor(Integer.parseInt(number)));
+    }
     System.exit(1);
   }
 
-
   public static String romanNumeralFor(int number) {
     StringBuilder string = new StringBuilder();
-//    if (number == 1) { return ("I"); }
-//    if (number == 4) { return ("IV"); }
-//    if (number == 5) { return ("V"); }
-//    if (number == 13) {
       for (int n : h.keySet()) {
         while (number >= n) {
           string.append(h.get(n));
-//          System.err.println(n + " " + string.toString());
           number-=n;
         }
       }
-//    }
+
     return string.toString();
   }
 }
