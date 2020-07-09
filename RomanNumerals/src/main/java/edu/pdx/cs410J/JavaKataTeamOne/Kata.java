@@ -10,7 +10,7 @@ import java.util.Hashtable;
  */
 public class Kata {
 
-  Hashtable<Integer, String> h;
+  public static Hashtable<Integer, String> h;
 
   public Kata() {
     h = new Hashtable<Integer, String>();
@@ -20,7 +20,7 @@ public class Kata {
     h.put(50,"L");
     h.put(100,"C");
     h.put(500,"D");
-    h.put(1000,"M"); 
+    h.put(1000,"M");
   }
 
 
@@ -36,6 +36,11 @@ public class Kata {
     if (number == 1) { return ("I"); }
     if (number == 4) { return ("IV"); }
     if (number == 5) { return ("V"); }
+    if (number == 13) {
+      for (int n : h.keySet()) {
+        if (number > n)
+      }
+    }
     return "none";
   }
 }
