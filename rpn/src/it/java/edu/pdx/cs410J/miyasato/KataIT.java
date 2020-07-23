@@ -1,4 +1,4 @@
-package edu.pdx.cs410J.JavaKataTeamOne;
+package edu.pdx.cs410J.miyasato;
 
 import edu.pdx.cs410J.InvokeMainTestCase;
 import org.junit.Test;

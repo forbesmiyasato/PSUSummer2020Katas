@@ -6,13 +6,13 @@
     <groupId>edu.pdx.cs410J</groupId>
     <version>Summer2020</version>
   </parent>
-  <groupId>edu.pdx.cs410J.JavaKataTeamOne</groupId>
-  <artifactId>RomanNumerals</artifactId>
+  <groupId>edu.pdx.cs410J.miyasato</groupId>
+  <artifactId>rpn</artifactId>
   <version>Summer2020</version>
   <packaging>jar</packaging>
 
   <name>Kata Project</name>
-  <description>A simple project for getting started with code RomanNumeralss</description>
+  <description>A simple project for getting started with code rpns</description>
   <url>http://www.cs.pdx.edu</url>
 
   <properties>
@@ -35,7 +35,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs410J.JavaKataTeamOne.Kata</mainClass>
+              <mainClass>edu.pdx.cs410J.kata.Kata</mainClass>
             </manifest>
           </archive>
         </configuration>
