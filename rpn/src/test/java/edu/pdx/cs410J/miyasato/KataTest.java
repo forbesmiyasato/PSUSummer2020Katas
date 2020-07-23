@@ -44,4 +44,9 @@ public class KataTest
         Kata kata = new Kata();
         assertThat(kata.RPN("4", "2", "+", "7", "-"), equalTo(-1));
   }
+  @Test
+  public void testRPNCalculator6() {
+      Kata kata = new Kata();
+      assertThat(kata.RPN("12", "2", "+", "7", "/"), equalTo(2));
+  }
 }

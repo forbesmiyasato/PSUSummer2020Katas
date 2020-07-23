@@ -32,7 +32,7 @@ public class Kata {
 					first = stack.pop();
 					
 					result = first / second;
-					
+					stack.push(result);
 					break;
 				case "+":
 					if (stack.size() < 2) {
@@ -42,6 +42,7 @@ public class Kata {
 					first = stack.pop();
 					
 					result = first + second;
+					stack.push(result);
 					break;
 				case "-":
 					if (stack.size() < 2) {
@@ -51,6 +52,7 @@ public class Kata {
 					first = stack.pop();
 					
 					result = first - second;
+					stack.push(result);
 					break;
 				case "*":
 					if (stack.size() < 2) {
@@ -60,8 +62,21 @@ public class Kata {
 					first = stack.pop();
 					
 					result = first * second;
+					stack.push(result);
 					
 					break;
+				case "SQRT":
+					if (stack.size() <= 0) {
+						throw new IllegalArgumentException("no enough parameters");
+					}
+					first=stack.pop();
+					stack.push(first);
+				case "MAX":
+					if (stack.size() > 1) {
+						throw new IllegalArgumentException("no enough parameters");
+					}
+					first=stack.pop();
+					stack.push(first);
 				default:
 					stack.push(Integer.parseInt(args[i]));
 					break;
